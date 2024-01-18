@@ -11,12 +11,15 @@ import pageObjects.GoogleHomePage;
 import pageObjects.GoogleResultsPage;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 
 public class Steps {
 
         @Given("We set base url for {string} page")
         public void openPage(String page) {
             Configuration.baseUrl = "https://" + page;
+            Configuration.headless = true;
+            clearBrowserCookies();
         }
 
         @When("We search for {string} word")
