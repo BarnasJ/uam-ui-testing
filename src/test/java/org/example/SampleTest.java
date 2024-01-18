@@ -33,7 +33,7 @@ public class SampleTest {
     public void sampleTest() {
         open("https://www.google.com");
 
-        $(By.id("L2AGLb")).click();
+//        $(By.id("L2AGLb")).click();
 
         $(By.id("APjFqb")).
                 val("Uniwersytet Adama Mickiewicza").
@@ -47,8 +47,7 @@ public class SampleTest {
 
     @Test
     public void pageObjectPatternApproach() {
-        new GoogleHomePage().open().acceptCookies()
-                .search("kalkulator");
+        new GoogleHomePage().open().search("kalkulator");
 
         new GoogleResultsPage()
                 .searchForTextInElement(0, "kalkulator");
