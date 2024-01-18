@@ -24,8 +24,7 @@ public class Steps {
 
         @When("We search for {string} word")
         public void weSearchForWord(String word) {
-            new GoogleHomePage().open().acceptCookies()
-                    .search(word);
+            new GoogleHomePage().open().search(word);
         }
 
         @Then("{string} text will be visible in results")
