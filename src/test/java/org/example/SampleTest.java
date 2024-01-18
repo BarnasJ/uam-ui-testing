@@ -50,7 +50,7 @@ public class SampleTest {
         new GoogleHomePage().open().search("kalkulator");
 
         new GoogleResultsPage()
-                .searchForTextInElement(0, "kalkulator");
+                .searchForTextInElement(0, "calculator");
     }
 
 }
